@@ -9,18 +9,19 @@ public class PaymentCalculator{
 
         String productValue;
         int paymentOption;
-        int input;
         double discount ;
         double instantPaymentPrice;
         double installmentPaymentPrice;
+
+        productValue = JOptionPane.showInputDialog(null, "Inpute Product Price");
+        int input = Integer.parseInt(productValue);
+
 
         discount = input* 0.1;
         instantPaymentPrice = input - discount;
         installmentPaymentPrice = input / 3;
         
-        productValue = JOptionPane.showInputDialog(null, "Inpute Product Price");
-         input = Integer.parseInt(productValue);
-
+       
         Object[] payOptions = {"Instant", "Inatalment Payment"};
         paymentOption = JOptionPane.showOptionDialog(null,
          "Choose a payment Option", "Payment Options",
