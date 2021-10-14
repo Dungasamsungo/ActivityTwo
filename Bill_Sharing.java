@@ -6,25 +6,17 @@ public class Bill_Sharing{
         /* Write a program to read the value of a bill and how many people will pay the bill, the system will display
 how much each person will pay.*/
 
-    String billValue;
-    int amount;
-    String numberOfPeople;
-    int numberOfPayers;
-    float amountPerPerson;
 
-billValue = JOptionPane.showInputDialog (null, "Enter Bill Value:");
-amount =Integer.parseInt (billValue);
+    String billValue = JOptionPane.showInputDialog (null, "Enter Bill Value:");    
+    Float amount =Float.parseFloat(billValue);
 
 
-numberOfPeople = JOptionPane.showInputDialog (null, "Enter number of payers:");
-numberOfPayers =Integer.parseInt (numberOfPeople);
+    String numberOfPeople = JOptionPane.showInputDialog (null, "Enter number of payers:");
+    int numberOfPayers =Integer.parseInt (numberOfPeople);
 
-amountPerPerson = amount / numberOfPayers;
+    Float amountPerPerson = amount / numberOfPayers;
 
-JOptionPane.showMessageDialog(null, "Amount For Each Payer: R"+ amountPerPerson);
-
-
-
+    JOptionPane.showMessageDialog(null, "Number of Payers " + numberOfPayers + "\n Amount For Each Payer: R " + amountPerPerson);
 
     }
 
